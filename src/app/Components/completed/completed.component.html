@@ -1,0 +1,8 @@
+<div *ngIf="todo.length > 0">
+  <div
+    *ngFor="let todo of todo; let i = index"
+    class="d-flex justify-content-center mt-2"
+  >
+    <h5>- {{ todo.title }}</h5>
+  </div>
+</div>

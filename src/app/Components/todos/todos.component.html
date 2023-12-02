@@ -1,0 +1,34 @@
+<div>
+  <div *ngIf="todo.length > 0">
+    <div
+      *ngFor="let todo of todo; let i = index"
+      class="d-flex justify-content-center mt-2"
+    >
+      <h5>- {{ todo.title }}</h5>
+      <button
+        type="button"
+        class="btn btn-success btn-sm ms-2"
+        (click)="completa(todo, i)"
+      >
+        Sposta
+      </button>
+    </div>
+  </div>
+</div>
+<div class="mt-5">
+  <label for="titolo">Parametro</label>
+  <input
+    type="text"
+    ngModel="titolo"
+    id="titolo"
+    class="ms-2"
+    placeholder="inserisci un parametro"
+  />
+  <button
+    type="button"
+    class="btn btn-primary btn-sm ms-2"
+    (click)="aggiungi()"
+  >
+    aggiungi
+  </button>
+</div>
